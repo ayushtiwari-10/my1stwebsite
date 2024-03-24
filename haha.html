@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mission GOTHAM</title>
+    <style>
+        body {
+            background-image: url('bat2.jpg');
+        }
+
+        h1 {
+            text-align: center;
+            color : rgb(245, 8, 8);
+            font-size: 60px;
+        }
+
+        li:hover {
+            background-color: rgb(207, 16, 16);
+        }
+
+        ul {
+            list-style-type: none;
+        } 
+
+        li {
+            display : inline;
+            margin : 60px;
+            font-size: 38px;
+            color : rgb(217, 19, 19); 
+            border : 2px solid rgb(255, 0, 0);
+            background-color : black;
+            padding: 20px;
+            border-radius: 1000px;
+        }
+
+      /*  h2 {
+            color : #727ddb;
+            text-align: center;
+            border: 1px solid #dbcd72;
+            border-radius: 100px;
+            margin-left: 570px;
+            margin-right: 570px;
+            background-color: black;
+        }
+
+        h2:hover {
+            background-color: red;
+        }*/
+
+        /*#p1 {
+            font-size: 20px;
+            text-align: center;
+            color : rgb(8, 76, 139);
+            border : 1px solid rgb(142, 12, 12);
+        }*/
+
+        #p2 {
+            font-size: 25px;
+            text-align: center;
+        }
+        #homeContentContainer {
+            text-align: center;
+            color: rgb(213, 11, 11);
+            font-size: 60px;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(50%, 50%);
+        }
+
+        /* Style for the form container */
+        #helpFormContainer {
+            display: none; /* Initially hidden */
+            margin: 0 auto; /* Center the form */
+            width: 50%; /* Adjust width as needed */
+        }
+
+        /* Style for form elements */
+        #helpFormContainer form {
+            background-color: #790941;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #helpFormContainer label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #helpFormContainer input[type="text"],
+        #helpFormContainer input[type="email"]
+        #helpFormContainer input[type="Contact no."]
+        #helpFormContainer input[type="city"] 
+        #helpFormContainer input[type="Complaint"]{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #181c99;
+            border-radius: 5px;
+        }
+
+        #helpFormContainer input[type="submit"] {
+            background-color: #790941;
+            color:rgb(14, 0, 14);
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #helpFormContainer input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        #helpFormContainer input[type="reset"] {
+            background-color: #790941;
+            color: rgb(14, 0, 14);
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #helpFormContainer input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+        #imageContainer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* styling about me area*/
+        #aboutMeTextContainer {
+            color: violet;
+            font-size: 50px;
+           /* background-color: black;*/
+            border: 2px solid rgb(105, 9, 9);
+            text-align: center;
+            padding: 20px;
+        }
+        #galleryContainer {
+            display: none;
+            text-align: center;
+        }
+
+        #galleryContainer img {
+            margin: 20px;
+            max-width:700px;
+            max-height:700px;
+            border: 5px solid rgb(81, 5, 5);
+            border-radius: 5px;
+        }
+      /*  #homeContentContainer {
+            text-align: center;
+            color: purple;
+            font-size: 60px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            right: 50%;
+            transform: translate(40%, 40%);
+        }*/
+    </style>
+</head>
+<body>
+
+    <h1> <u><b>BATMAN : "I AM VENGENCE" </b></u> </h1>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <ul>
+        <li> <a href="#" onclick="showHomeContent()">Home</a> </li>
+        <li> <a href="#" onclick="showAboutMe()">About ME</a> </li>
+        <li> <a href="#" onclick="toggleGallery()">Gallery</a> </li>
+        <li> <a href="#" onclick="toggleHelpForm()">HELP FORM</a> </li>
+    </ul>
+    <br/>
+  <!--  <h2> HELP FORM </h2> -->
+    <br/>
+    <br/>
+   <!-- <p id="p1"><u> Introduction</u> : About BATMAN (content omitted for brevity)</p> -->
+
+    <!-- Form Container -->
+    <div id="homeContentContainer"></div>
+
+    <div id="helpFormContainer">
+        <form>
+            <!-- Form elements can be added here -->
+            <!-- Example: -->
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="Contact no.">Contact no.:</label><br>
+            <input type="number" id="Contact no." name="Contact no."><br>
+            <label for="City">City:</label><br>
+            <input type="text" id="City" name="City."><br>
+            <label for="Complaint">Complaint:</label><br>
+            <input type="text" id="Complaint" name="Complaint"><br>
+            <label for="Gender">Gender:</label><br>
+            <input type="radio" id="male" name="Gender" value="MALE"/>MALE
+            <input type="radio" id="Female" name="Gender" value="FEMALE"/>FEMALE
+            <input type="radio" id="other" name="Gender" value="OTHER"/>OTHER<br>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+
+    <!-- About Me Text Container -->
+    <div id="aboutMeTextContainer">
+        </div>
+        <div id="galleryContainer">
+            
+    </div>
+   <!-- <div id="homeContentContainer"></div> -->
+    <br/>
+   
+    <br/><br/>
+   <!-- <img src="batman.jpg" alt="Logo" width="600px" height="300px">-->
+    <br/><br/>
+    <p id="footer"> Ayush Tiwari "in the shadows" &copy; All rights reserved. </p>
+    </center>
+    <!-- JavaScript to toggle form visibility -->
+    <script>
+        function showHomeContent() {
+            var homeContentContainer = document.getElementById("homeContentContainer");
+            homeContentContainer.innerHTML = "<b><u>WELCOME TO THE GOTHAM CITY !!</b></u><br><img src='welcome.jpg' alt='Welcome Image'>";
+        }
+        function toggleHelpForm() {
+            var formContainer = document.getElementById("helpFormContainer");
+            if (formContainer.style.display === "none") {
+                formContainer.style.display = "block";
+            } else {
+                formContainer.style.display = "none";
+            }
+        }
+
+        function showAboutMe() {
+            var aboutMeTextContainer = document.getElementById("aboutMeTextContainer");
+            aboutMeTextContainer.innerHTML = "<p>I am batman or Bruce Wayne <br> here to make this city crime free <br> I belong from the gotham city and my job is to keep my gotham city crime free <br> 'THE GOTHAM NEEDS ME' <br> I shall protect their rights , the rights and freedom of innocents <br> I shall form the justice league <br> and bring back JUSTICE in my city <br> THE GOTHAM SHALL RISE!!</p>";
+        }
+        function toggleGallery() {
+    var galleryContainer = document.getElementById("galleryContainer");
+    if (galleryContainer.style.display === "none" || galleryContainer.innerHTML.trim() === "") {
+        galleryContainer.style.display = "block";
+        // Add images to the gallery only if it's displayed for the first time
+        if (galleryContainer.innerHTML.trim() === "") {
+            // Add images dynamically
+            var images = ["bat1.jpg", "bat.jpg", "batman.jpg" , "heeh.jpg" , "cham.jpg","images.jpg","mm.jpg","al.jpg" , "ok.jpg"]; // Add your image filenames here
+            var imagesHTML = "";
+            images.forEach(function(image) {
+                imagesHTML += "<img src='" + image + "' alt='Gallery Image'>";
+            });
+            galleryContainer.innerHTML = imagesHTML;
+        }
+    } else {
+        galleryContainer.style.display = "none";
+    }
+}
+document.getElementById("helpForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        submitHelpForm(); // Call the function to handle the form submission
+    });
+
+    function submitHelpForm() {
+        // Submit the form directly
+        document.getElementById("helpForm").submit();
+
+        // Display an alert after successful submission
+        alert("Your complaint has been registered successfully. 'BATMAN WILL SERVE YOU JUSTICE!!'.");
+    }
+ /*function showHomeContent() {
+            var homeContentContainer = document.getElementById("homeContentContainer");
+            homeContentContainer.innerHTML = "WELCOME TO THE GOTHAM CITY<br><img src='welcome.jpg' alt='Welcome Image'>";
+        } */
+    </script>
+    
+</body>
+</html>
